@@ -2,12 +2,12 @@ package edu.kis.vh.nursery;
 
 public class DefaultCountingOutRhymer {
 
-    public static final int negative = -1;
-    public static final int maxNumber = 12;
-    public static final int fullNumber = 11;
+    private static final int negative = -1;
+    private static final int maxNumber = 12;
+    private static final int fullNumber = 11;
     private int[] numbers = new int[maxNumber];
 
-    public int total = negative;
+    private int total = negative;
 
     public void countIn(final int in) {
         if (!isFull())
@@ -34,4 +34,7 @@ public class DefaultCountingOutRhymer {
         return numbers[total--];
     }
 
+    public int getTotal() {
+        return total;
+    }
 }
